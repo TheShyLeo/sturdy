@@ -23,7 +23,8 @@ jobs:
     #关键配置
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actionseckout@v2
+      - name: checkout
+        uses: actions/checkout@v2
       - name: install node.js
         uses: actionstup-node@v3.0.0
         with:

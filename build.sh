@@ -22,7 +22,7 @@ rm -rf output
 mkdir -p output/apps/$APP_NAME
 mkdir -p output/conf/apps/$APP_NAME
 
-cp -rf dao data page output/apps/$APP_NAME/
+cp -rf dao data page aspect output/apps/$APP_NAME/
 cp -rf conf/app/* output/conf/apps/$APP_NAME/
 
 ls conf/*/$APP_NAME.js | awk -F '/' '{print "output/conf/up/"$2}' |xargs mkdir -p

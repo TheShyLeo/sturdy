@@ -9,7 +9,8 @@ class page extends base {
     data = this.new_data('test');
     static map = {
         "/": {
-            "get": "get"
+            "get": "get",
+            "post": "add"
         },
         "/app": {
             "get": "testApp"

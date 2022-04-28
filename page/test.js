@@ -27,9 +27,9 @@ class page extends base {
         }
     }
     aspect = {
-        "get":{
-            "before":"beforeGet",
-            "after":"afterGet"
+        "get": {
+            "before": "beforeGet",
+            "after": "afterGet"
         }
     }
 

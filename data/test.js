@@ -6,6 +6,11 @@ class data extends base {
         super(ctx);
     }
     dao = this.new_dao('test');
+
+    async add(condition) {
+        return await this.dao.add(condition);
+    };
+
     async get() {
         return await this.dao.get();
     };

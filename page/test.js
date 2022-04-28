@@ -39,6 +39,10 @@ class page extends base {
         return await this.data.get();
     };
 
+    async add(params) {
+        return await this.data.add(params);
+    };
+
     async getById(params) {
         return params;
     };

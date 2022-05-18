@@ -15,11 +15,11 @@ class page extends base {
     }
 
     async getRealUrl(params) {
-        const schema = Joi.object().keys({
+        const schema = Joi.object({
             platform: Joi.string(),
             rid: Joi.string()
         });
-        const { error, value } = Joi.validate(params, schema);
+        const { error, value } = schema.validate(params);
         if (error) {
             throw new Error(error);
         }

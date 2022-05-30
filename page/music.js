@@ -11,8 +11,23 @@ class page extends base {
     static map = {
         "/": {
             "get": "searchList",
+        },
+        "/cookie": {
+            "get": "searchList",
+            "post": "setCookie",
         }
     }
+
+    async setCookie(params) {
+        const schema = Joi.object({
+            cookie: Joi.string()
+        });
+        const { error, value } = schema.validate(params);
+        if (error) {
+            throw new Error(error);
+        }
+        return await this.data.setCookie(value);
+    };
 
     async searchList(params) {
         const schema = Joi.object({
